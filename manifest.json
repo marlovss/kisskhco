@@ -1,0 +1,147 @@
+{
+    "id": "community.kisskh",
+    "version": "0.0.4",
+    "name": "X-KH by dexter21767",
+    "description": "Stream Asian drama over https (with subtitles), by Dexter21767",
+    "logo": "https://kisskh.me/assets/icons/icon-192x192.png",
+    "background": "https://github.com/Stremio/stremio-art/raw/main/originals/reiphantomhive1.png",
+    "contactEmail": "ahmidiyasser@gmail.com",
+    "catalogs": [
+        
+        {
+            "type": "X-KH",
+            "id": "1",
+            "name": "series",
+            "extra": [ {"name": "search", "isRequired": true} ]
+        },
+        {
+            "type": "X-KH",
+            "id": "2",
+            "name": "movie",
+            "extra": [ {"name": "search", "isRequired": true} ]
+        },
+        {
+            "type": "X-KH",
+            "id": "3",
+            "name": "anime",
+            "extra": [ {"name": "search", "isRequired": true} ]
+        },
+        {
+            "type": "series",
+            "id": "4",
+            "name": "series - hollywood",
+            "extra": [ {"name": "search", "isRequired": true} ]
+        },
+        {
+            "type": "X-KH",
+            "id": "type=2&status=1",
+            "name": "movie Ongoing",
+            "extra": [
+                {"name": "skip","isRequired": false,"options": [0,10,20,30]},
+                { "name": "genre","isRequired": false, "options": [ "South Korea", "Chinese","Thailand","Japanese","Hong Kong","Taiwan"] }
+            ]
+        },
+        {
+            "type": "X-KH",
+            "id": "type=2&status=2",
+            "name": "movie Completed",
+            "extra": [
+                {"name": "skip","isRequired": false,"options": [0,10,20,30]},
+                { "name": "genre","isRequired": false, "options": [ "South Korea", "Chinese","Thailand","Japanese","Hong Kong","Taiwan"] }
+            ]
+        },
+        {
+            "type": "X-KH",
+            "id": "type=1&status=1",
+            "name": "series Ongoing",
+            "extra": [
+                {"name": "skip","isRequired": false,"options": [0,10,20,30]},
+                { "name": "genre","isRequired": false, "options": [ "South Korea", "Chinese","Thailand","Japanese","Taiwan"] }
+            ]
+        },
+        {
+            "type": "X-KH",
+            "id": "type=1&status=2",
+            "name": "series Completed",
+            "extra": [
+                {"name": "skip","isRequired": false,"options": [0,10,20,30]},
+                { "name": "genre","isRequired": false, "options": [ "South Korea", "Chinese","Thailand","Japanese","Taiwan"] }
+            ]
+        },
+        {
+            "type": "X-KH",
+            "id": "type=4&status=1",
+            "name": "Hollywood Ongoing",
+            "extra": [
+                {"name": "skip","isRequired": false,"options": [0,10,20,30]}
+            ]
+        },
+        {
+            "type": "X-KH",
+            "id": "type=4&status=2",
+            "name": "Hollywood Completed",
+            "extra": [
+                {"name": "skip","isRequired": false,"options": [0,10,20,30]}
+            ]
+        },
+        {
+            "type": "X-KH",
+            "id": "type=3&status=1",
+            "name": "anime Ongoing",
+            "extra": [
+                {"name": "skip","isRequired": false,"options": [0,10,20,30]},
+                { "name": "genre","isRequired": false, "options": ["Chinese","Japanese"] }
+            ]
+        },
+        {
+            "type": "X-KH",
+            "id": "type=3&status=2",
+            "name": "anime Completed",
+            "extra": [
+                {"name": "skip","isRequired": false,"options": [0,10,20,30]},
+                { "name": "genre","isRequired": false, "options": ["Chinese","Japanese"] }
+            ]
+        }
+    ],
+    "resources": [
+        {
+            "name": "stream",
+            "types": [
+                "movie",
+                "series",
+                "anime"
+            ],
+            "idPrefixes": [
+                "X-KH:"
+            ]
+        },
+        {
+            "name": "meta",
+            "types": [
+                "movie",
+                "series",
+                "anime"
+            ],
+            "idPrefixes": [
+                "X-KH:"
+            ]
+        }
+    ],
+    "types": [
+        "movie",
+        "series",
+        "anime"
+    ],
+    "behaviorHints": {
+        "configurable": true,
+        "configurationRequired": false
+    },
+    "config":[{
+        "key":"sub",
+        "type":"select",
+        "title":"Show only content with subtitles in the selected language",
+        "default":"All Subtitles",
+        "options":["All Subtitles","English","Khmer","Indonesian","Malay","Thai","Arabic"],
+        "required":false
+    }]
+}
